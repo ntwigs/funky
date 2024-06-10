@@ -2,9 +2,9 @@
 
 The funky package provides a collection of array utility functions in Go, mimicking JavaScript/TypeScript Array methods.
 
-I've created this, what some (most) people might call, **monstrosity**, since I am seriously missing all the array methods from JavaScript/TypeScript. Most of all, I missed my *map*, *filter* and *reduce*. Love those badbois. But I thought, might as well do an implementation for, at least, most array methods whilst I'm at it.
+I've created this, what some (most) people might call, **monstrosity**, since I am seriously missing all the array methods from JavaScript/TypeScript. Most of all, I missed my *map*, *filter* and *reduce*. Love those badbois. But I thought, might as well implement most array methods while I'm at it.
 
-⚠️ Not battle tested what so ever - beware - danger ahead ⚠️
+⚠️ Not battle-tested whatsoever - beware - danger ahead ⚠️
 
 ---
 
