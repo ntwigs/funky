@@ -1,14 +1,14 @@
 <p align="center">
   <img alt='funky-sloth' src='https://github.com/ntwigs/funky/assets/14088342/1710632c-da0e-4575-8668-e374c617e3ce' width='250'/>
-  <h1 align="center">FUNKY</h1>
-  <p align="center">Utility functions for Golang</p>
+  <h1 align="center">Funky</h1>
+  <p align="center">🔥 Utility functions for Golang 🔥</p>
 </div>
 
 ---
+The world of Go can be an amazing place - filled with simplicity and goodness. But if I have to create one more for-of to filter out some values in a slice - there might be a new star on `How to get away with murder`.
 
-I've created this, what some (most) people might call, **monstrosity**, since I am seriously missing all the array methods from JavaScript/TypeScript. Most of all, I missed my *map*, *filter* and *reduce*. Love those badbois. But I thought, might as well implement most array methods while I'm at it.
 
-⚠️ Not battle-tested whatsoever - beware - danger ahead ⚠️
+This funcky package of utility functions will probably **not be for you**, but most likely just **be for me**!
 
 ---
 
@@ -159,14 +159,6 @@ arr := []int{1, 2, 3, 4, 5}
 fmt.Println(funky.Join(arr, "-")) // Output: "1-2-3-4-5"
 ```
 
-### Keys
-Returns an array of a given object's own enumerable property names.
-
-```go
-arr := []int{1, 2, 3, 4, 5}
-fmt.Println(funky.Keys(arr)) // Output: [0 1 2 3 4]
-```
-
 ### LastIndexOf
 Returns the last index at which a given element can be found in the array.
 
@@ -308,14 +300,6 @@ fmt.Println(funky.Unshift(&arr, 0)) // Output: 6
 fmt.Println(arr)                    // Output: [0 1 2 3 4 5]
 ```
 
-### Values
-Returns a new array iterator object that contains the values for each index in the array.
-
-```go
-arr := []int{1, 2, 3, 4, 5}
-fmt.Println(funky.Values(arr)) // Output: [1 2 3 4 5]
-```
-
 ### With
 Returns a new array with the specified value inserted at the specified index.
 
@@ -324,19 +308,38 @@ arr := []int{1, 2, 3, 4, 5}
 fmt.Println(funky.With(arr, 2, 10)) // Output: [1 2 10 4 5]
 ```
 
-### Entries
-Returns a slice of KeyValuePair containing the key/value pairs for each index in the array.
+### Assign
+Merges multiple source maps into a target map. Properties from the sources will overwrite those in the target map if they have the same key.
 
 ```go
-arr := []int{1, 2, 3}
-entries := funky.Entries(arr)
-for _, entry := range entries {
-	fmt.Printf("Key: %d, Value: %d\n", entry.Key, entry.Value)
-}
-// Output:
-// Key: 0, Value: 1
-// Key: 1, Value: 2
-// Key: 2, Value: 3
+obj1 := map[string]int{"a": 1, "b": 2}
+obj2 := map[string]int{"b": 3, "c": 4}
+fmt.Println(funky.Assign(obj1, obj2)) // Output: map[a:1 b:3 c:4]
+```
+
+### Has
+Checks if a map contains a specific key. Returns true if the key exists, false otherwise.
+
+```go
+obj := map[string]int{"a": 1, "b": 2}
+fmt.Println(funky.Has(obj, "a")) // Output: true
+fmt.Println(funky.Has(obj, "dragon")) // Output: false
+```
+
+### Keys
+Returns a slice containing all the keys in a map.
+
+```go
+obj := map[string]int{"a": 1, "b": 2}
+fmt.Println(funky.Keys(obj)) // Output: [a b]
+```
+
+### Values
+Returns a slice containing all the values in a map.
+
+```go
+obj := map[string]int{"a": 1, "b": 2}
+fmt.Println(funky.Values(obj)) // Output: [1 2]
 ```
 
 ## Running Tests
