@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+// SLICES
+
 // At returns the element at the specified index.
 func At[T any](arr []T, index int) T {
 	if index < 0 {
@@ -205,15 +207,6 @@ func IndexOf[T comparable](arr []T, value T) int {
 	return -1
 }
 
-// Keys returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would.
-func Keys[T any](arr []T) []int {
-	keys := make([]int, len(arr))
-	for i := range arr {
-		keys[i] = i
-	}
-	return keys
-}
-
 // LastIndexOf returns the last index at which a given element can be found in the array, or -1 if it is not present.
 func LastIndexOf[T comparable](arr []T, value T) int {
 	for i := len(arr) - 1; i >= 0; i-- {
@@ -406,11 +399,6 @@ func Unshift[T any](arr *[]T, elements ...T) int {
 	return len(*arr)
 }
 
-// Values returns a new array iterator object that contains the values for each index in the array.
-func Values[T any](arr []T) []T {
-	return arr
-}
-
 // With returns a new array with the specified value inserted at the specified index.
 func With[T any](arr []T, index int, value T) []T {
 	result := append([]T(nil), arr...)
@@ -420,16 +408,36 @@ func With[T any](arr []T, index int, value T) []T {
 	return result
 }
 
-type KeyValuePair[T any] struct {
-	Key   int
-	Value T
+// Assign assigns properties from source maps to the target map.
+func Assign[K comparable, V any](target map[K]V, sources ...map[K]V) map[K]V {
+	for _, source := range sources {
+		for key, value := range source {
+			target[key] = value
+		}
+	}
+	return target
 }
 
-// Entries returns a slice of KeyValuePair containing the key/value pairs for each index in the array.
-func Entries[T any](arr []T) []KeyValuePair[T] {
-	entries := make([]KeyValuePair[T], len(arr))
-	for i, v := range arr {
-		entries[i] = KeyValuePair[T]{Key: i, Value: v}
+// Has checks if a map contains a specific key. Returns true if the key exists in the map, false otherwise.
+func Has[K comparable, V any](obj map[K]V, key K) bool {
+	_, exists := obj[key]
+	return exists
+}
+
+// Keys returns a slice containing all the keys in a map.
+func Keys[K comparable, V any](obj map[K]V) []K {
+	var keys []K
+	for key := range obj {
+		keys = append(keys, key)
 	}
-	return entries
+	return keys
+}
+
+// Values returns a slice containing all the values in a map.
+func Values[K comparable, V any](obj map[K]V) []V {
+	var values []V
+	for _, value := range obj {
+		values = append(values, value)
+	}
+	return values
 }
