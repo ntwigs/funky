@@ -336,10 +336,10 @@ for _, entry := range entries {
 ```
 
 ## Running Tests
-Run the tests using the go test command:
+Run the tests using the make command:
 
 ```sh
-go test ./...
+make test
 ```
 
 ---
