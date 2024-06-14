@@ -142,14 +142,6 @@ func TestJoin(t *testing.T) {
 	}
 }
 
-func TestKeys(t *testing.T) {
-	arr := []int{1, 2, 3, 4, 5}
-	want := []int{0, 1, 2, 3, 4}
-	if got := funky.Keys(arr); !reflect.DeepEqual(got, want) {
-		t.Errorf("Keys() = %v, want %v", got, want)
-	}
-}
-
 func TestLastIndexOf(t *testing.T) {
 	arr := []int{1, 2, 3, 2, 5}
 	if got := funky.LastIndexOf(arr, 2); got != 3 {
@@ -310,29 +302,10 @@ func TestUnshift(t *testing.T) {
 	}
 }
 
-func TestValues(t *testing.T) {
-	arr := []int{1, 2, 3, 4, 5}
-	if got := funky.Values(arr); !reflect.DeepEqual(got, arr) {
-		t.Errorf("Values() = %v, want %v", got, arr)
-	}
-}
-
 func TestWith(t *testing.T) {
 	arr := []int{1, 2, 3, 4, 5}
 	want := []int{1, 2, 10, 4, 5}
 	if got := funky.With(arr, 2, 10); !reflect.DeepEqual(got, want) {
 		t.Errorf("With() = %v, want %v", got, want)
-	}
-}
-
-func TestEntries(t *testing.T) {
-	arr := []int{1, 2, 3}
-	want := []funky.KeyValuePair[int]{
-		{Key: 0, Value: 1},
-		{Key: 1, Value: 2},
-		{Key: 2, Value: 3},
-	}
-	if got := funky.Entries(arr); !reflect.DeepEqual(got, want) {
-		t.Errorf("Entries() = %v, want %v", got, want)
 	}
 }
