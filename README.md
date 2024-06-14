@@ -1,6 +1,10 @@
-# funky
+<p align="center">
+  <img alt='funky-sloth' src='https://github.com/ntwigs/funky/assets/14088342/1710632c-da0e-4575-8668-e374c617e3ce' width='250'/>
+  <h1 align="center">FUNKY</h1>
+  <p align="center">Utility functions for Golang</p>
+</div>
 
-The funky package provides a collection of array utility functions in Go, mimicking JavaScript/TypeScript Array methods.
+---
 
 I've created this, what some (most) people might call, **monstrosity**, since I am seriously missing all the array methods from JavaScript/TypeScript. Most of all, I missed my *map*, *filter* and *reduce*. Love those badbois. But I thought, might as well implement most array methods while I'm at it.
 
