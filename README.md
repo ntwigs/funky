@@ -1,7 +1,7 @@
 <p align="center">
   <img alt='funky-sloth' src='https://github.com/ntwigs/funky/assets/14088342/1710632c-da0e-4575-8668-e374c617e3ce' width='250'/>
   <h1 align="center">Funky</h1>
-  <p align="center">🔥 Utility functions for Golang 🔥</p>
+  <p align="center">🔥 Utility functions for Go 🔥</p>
 </div>
 
 ---
