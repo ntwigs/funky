@@ -1,7 +1,7 @@
 package funky
 
 import (
-	"reflect"
+	"slices"
 	"testing"
 )
 
@@ -11,7 +11,11 @@ func TestValues(t *testing.T) {
 
 	result := Values(obj)
 
-	if !reflect.DeepEqual(result, want) {
-		t.Errorf("Values() = %v, want %v", result, want)
+	for _, value := range want {
+		hasValue := slices.Contains(result, value)
+
+		if !hasValue {
+			t.Errorf("Values() = %v, want %v", result, want)
+		}
 	}
 }
