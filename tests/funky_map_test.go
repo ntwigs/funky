@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ntwigs/funky/funky"
+	"github.com/ntwigs/funky"
 )
 
 func TestAssign(t *testing.T) {
