@@ -349,7 +349,4 @@ make test
 
 ---
 
- <div align="center">
-    Created with an unhealthy amount of hatred towards for-loops and mutations.
-  <img alt='Licence Apache' src='https://img.shields.io/github/license/ntwigs/funky?style=flat-square' />
-</div>
+Created with an unhealthy amount of hatred towards for-loops, mutations and switch-statements.
