@@ -6,7 +6,7 @@
 
 ---
 
-A delightful little - non-idiomatic - collection of Go utility functions. I think they're neat. 
+A delightful little collection of Go utility functions. I think they're neat. 🥃
 
 ---
 
