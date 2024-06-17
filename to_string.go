@@ -1,6 +1,9 @@
 package funky
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 func ToString[T any](arr []T) string {
 	var strArr []string
