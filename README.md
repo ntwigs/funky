@@ -349,4 +349,4 @@ make test
 
 ---
 
-Created with an unhealthy amount of hatred towards for-loops, mutations and switch-statements.
+Created with an unhealthy amount of hatred towards for-loops, mutations, and switch statements.
