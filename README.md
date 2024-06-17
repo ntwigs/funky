@@ -5,10 +5,8 @@
 </div>
 
 ---
-The world of Go can be an amazing place - filled with simplicity and goodness. But if I have to create one more for-of to filter out some values in a slice - there might be a new star on `How to get away with murder`.
 
-
-This funcky package of utility functions will probably **not be for you**, but most likely just **be for me**!
+A delightful little - non-idiomatic - collection of Go utility functions. I think they're neat. 
 
 ---
 
@@ -351,6 +349,7 @@ make test
 
 ---
 
-License
-This project is licensed under the MIT License.
-
+ <div align="center">
+    Created with an unhealthy amount of hatred towards for-loops and mutations.
+  <img alt='Licence Apache' src='https://img.shields.io/github/license/ntwigs/funky?style=flat-square' />
+</div>
