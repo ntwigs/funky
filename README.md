@@ -32,6 +32,15 @@ fmt.Println(funky.At(arr, 2))  // Output: 3
 fmt.Println(funky.At(arr, -1)) // Output: 5
 ```
 
+### Clamp
+Clamps a number between min and max
+
+```go
+fmt.Println(funky.Clamp(0.62, 1.25, 5.58)) // Output: 1
+fmt.Println(funky.Clamp(6, 1, 5)) // Output: 5
+fmt.Println(funky.Clamp(3, 1, 5)) // Output: 3
+```
+
 ### Concat
 Returns a new array that is the result of concatenating the provided arrays.
 
@@ -172,7 +181,21 @@ Creates a new array populated with the results of calling a provided function on
 arr := []int{1, 2, 3}
 fmt.Println(funky.Map(arr, func(n int) int { return n * 2 })) // Output: [2 4 6]
 ```
- 
+
+### Min
+Returns the smalest of n or m
+
+```go
+fmt.Println(funky.Min(1,2)) // Output: 1
+```
+
+### Max
+Returns the largets of n or m
+
+```go
+fmt.Println(funky.Max(1,2)) // Output: 2
+```
+
 ### Pop
 Removes the last element from an array and returns that element.
 
