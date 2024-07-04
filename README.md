@@ -2,6 +2,12 @@
   <img alt='funky-sloth' src='https://github.com/ntwigs/funky/assets/14088342/1710632c-da0e-4575-8668-e374c617e3ce' width='250'/>
   <h1 align="center">Funky</h1>
   <p align="center">🔥 Utility functions for Go 🔥</p>
+  <p align="center">
+    <a href="https://pkg.go.dev/github.com/ntwigs/funky?tab=doc"><img src="https://godoc.org/github.com/golang/gddo?status.svg" alt="GoDoc"></a>
+    <a href="https://github.com/ntwigs/funky/actions"><img src="https://github.com/ntwigs/funky/workflows/build/badge.svg" alt="Build Status"></a>
+    <a href="https://coveralls.io/github/ntwigs/funky?branch=main"><img src="https://coveralls.io/repos/github/ntwigs/funky/badge.svg?branch=main" alt="Coverage Status"></a>
+    <a href="https://goreportcard.com/report/ntwigs/funky"><img src="https://goreportcard.com/badge/ntwigs/funky" alt="Go ReportCard"></a>
+  </p>
 </div>
 
 ---
