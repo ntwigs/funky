@@ -15,6 +15,9 @@ A delightful little collection of Go utility functions. I think they're neat. ðŸ
 
 ---
 
+> [!WARNING]
+> Deprecated in favor of [samber/lo](https://github.com/samber/lo).
+
 ## Installation
 
 ```sh
